@@ -1,0 +1,11 @@
+.mdl-layout__drawer-button {
+      background: url(/images/ic_menu_24px.svg) center center no-repeat;
+}
+.mdl-layout__drawer-button .material-icons  {
+  display: none ;
+}
+.mdl-layout__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
