@@ -1,20 +1,38 @@
-import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import 'react-mdl/extra/material';
+import 'react-mdl/extra/material.css';
 
-import Layout from './Layout';
+import React, { Component } from 'react';
+import { HashRouter, Match, Link } from 'react-router';
+
+import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
+
 import About from './components/About';
 import Home from './components/Home';
 
-function hideDrawer() {
-  document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
-  document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
+class MatchAndHideDrawer extends Component {
+  componentWillUpdate() {
+    document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+    document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
+  }
+  render() {
+    return <Match {...this.props} />;
+  }
 }
 
 export default () => (
-  <Router history = { hashHistory } onUpdate = { hideDrawer } >
-    <Route path ="/" component= { Layout } title = "PWA">
-      <IndexRoute component = { Home } />
-      <Route path ="about" component= { About } />
-    </Route>
-  </Router>
+  <HashRouter>
+    <Layout fixedHeader>
+      <Header title="PWA"/>
+      <Drawer title="PWA">
+        <Navigation>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </Navigation>
+      </Drawer>
+      <Content>
+        <MatchAndHideDrawer exactly pattern="/" component={ Home } />
+        <MatchAndHideDrawer pattern="/about" component={ About } />
+      </Content>
+    </Layout>
+  </HashRouter>
 );
