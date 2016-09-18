@@ -41,7 +41,7 @@ module.exports = {
       include: path.join(__dirname, 'src'),
       query: {
         "presets": [
-          "es2015-webpack",
+          "es2015",
           "stage-0",
           "react"
         ]

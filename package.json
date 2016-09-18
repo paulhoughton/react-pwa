@@ -11,25 +11,25 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.0.1",
-    "babel-preset-es2015-webpack": "^6.4.1",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.0.15",
-    "clean-webpack-plugin": "^0.1.9",
+    "babel-preset-stage-0": "^6.5.0",
+    "clean-webpack-plugin": "^0.1.10",
     "copy-webpack-plugin": "^3.0.1",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.25.0",
     "html-webpack-plugin": "^2.22.0",
-    "offline-plugin": "^3.4.1",
-    "react-hot-loader": "^3.0.0-beta.2",
-    "react-mdl": "^1.6.0",
-    "react-router": "^2.5.2",
+    "offline-plugin": "^3.4.2",
+    "react-hot-loader": "^3.0.0-beta.4",
+    "react-mdl": "^1.7.2",
+    "react-router": "^2.8.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.1.0-beta.15",
-    "webpack-dev-server": "^2.1.0-beta.0"
+    "webpack": "^2.1.0-beta.22",
+    "webpack-dev-server": "^2.1.0-beta.4"
   },
   "dependencies": {
-    "react": "^15.2.0",
-    "react-dom": "^15.2.0"
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   }
 }
