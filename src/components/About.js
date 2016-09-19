@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardText, CardActions, Button } from 'react-mdl';
-import { hashHistory } from 'react-router';
+import { Link } from 'react-router';
 
 export default () => (
   <Card shadow={0} style={{ textAlign: 'center' }}>
@@ -9,7 +9,7 @@ export default () => (
       About this Application
     </CardText>
     <CardActions border>
-      <Button colored onClick={() => hashHistory.push('/') } >OK</Button>
+      <Link to="/"><Button colored>OK</Button></Link>
     </CardActions>
   </Card>
 );
