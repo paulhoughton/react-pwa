@@ -8,6 +8,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
+    './src/vendor',
     './src/index'
   ],
   output: {
@@ -16,20 +17,20 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-      new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: 'index.html'
     })
   ],
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel'],
+      loader: 'babel',
       include: path.join(__dirname, 'src'),
       query: {
         "presets": [
           "es2015",
-          "stage-0",
           "react"
         ],
         "plugins": [
