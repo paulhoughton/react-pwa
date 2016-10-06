@@ -14,14 +14,19 @@ render(
 
 if (module.hot) {
   module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+
     render(
       <AppContainer>
-         <App />
+         <NextApp />
       </AppContainer>,
       rootEl
     );
   });
 }
 
-import { install } from 'offline-plugin/runtime';
-install();
+import { install, applyUpdate } from 'offline-plugin/runtime';
+
+install({
+  onUpdateReady: () => applyUpdate()
+});
