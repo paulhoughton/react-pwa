@@ -27,16 +27,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loader: 'babel',
-      include: path.join(__dirname, 'src'),
-      query: {
-        "presets": [
-          "es2015",
-          "react"
-        ],
-        "plugins": [
-          "react-hot-loader/babel"
-        ]
-      }
+      include: path.join(__dirname, 'src')
     },
     {
       test: /\.css/,

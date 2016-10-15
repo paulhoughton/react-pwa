@@ -1,0 +1,28 @@
+exports[`test About has correct contents 1`] = `
+<div
+  className="mdl-card mdl-shadow--2dp"
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }>
+  <div
+    className="mdl-card__title"
+    style={
+      Object {
+        "margin": "auto",
+      }
+    }>
+    <h2
+      className="mdl-card__title-text">
+      PWA
+    </h2>
+  </div>
+  <div
+    className="mdl-card__supporting-text">
+    About this Application
+  </div>
+  <div
+    className="mdl-card__actions mdl-card--border" />
+</div>
+`;
