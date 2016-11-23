@@ -50,12 +50,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: 'babel',
+      loaders: 'babel-loader',
       include: path.join(__dirname, 'src'),
     },
     {
       test: /\.css/,
-      loaders: ["style", "css"]
+      loaders: ["style-loader", "css-loader"]
     }]
   }
 };

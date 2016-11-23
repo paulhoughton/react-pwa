@@ -26,12 +26,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       include: path.join(__dirname, 'src')
     },
     {
       test: /\.css/,
-      loaders: ["style", "css"]
+      loaders: ["style-loader", "css-loader"]
     }]
   }
 };
