@@ -1,10 +1,12 @@
 CACHE MANIFEST
-#ver:7/4/2016, 12:35:38 PM
+#ver:12/11/2016, 8:16:03 AM
+#plugin:4.5.3
 
 CACHE:
-../bundle.a3f65da727ebb0e82ce4.js
+../vendor.c0d50c2e.js
+../bundle.f7f90bd6.js
+../manifest.2c9621a6.js
 ../
-../images/ic_menu_24px.svg
 ../manifest.json
 
 NETWORK:
