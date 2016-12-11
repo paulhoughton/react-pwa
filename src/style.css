@@ -1,5 +1,5 @@
 .mdl-layout__drawer-button {
-      background: url(/images/ic_menu_24px.svg) center center no-repeat;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M0 0h24v24h-24z' fill='none'/%3E %3Cpath d='M3 18h18v-2h-18v2zm0-5h18v-2h-18v2zm0-7v2h18v-2h-18z' fill='%23FFFFFF'/%3E %3C/svg%3E") 50% no-repeat
 }
 .mdl-layout__drawer-button .material-icons  {
   display: none ;

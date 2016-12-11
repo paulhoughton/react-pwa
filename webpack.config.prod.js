@@ -19,11 +19,9 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(["dist"], { verbose: false }),
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'public/index.html'
     }),
-    new CopyWebpackPlugin([
-      { from: 'images/', to: 'images/' },
-      { from: 'manifest.json' }]),
+    new CopyWebpackPlugin([{ from: 'public/' }]),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
       minChunks: Infinity,
@@ -43,7 +41,7 @@ module.exports = {
       'process.env.NODE_ENV': '"production"'
     }),
     new OfflinePlugin({
-      excludes: ["images/*.png"],
+      excludes: ["images/*"],
       ServiceWorker: { events: true }
     })
   ],
