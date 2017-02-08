@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardTitle, CardText, CardActions, Button } from 'react-mdl';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default () => (
   <Card shadow={0} style={{ textAlign: 'center' }}>

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
-import { HashRouter, Match, Link } from 'react-router';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import { Layout, Header, Drawer, Navigation, Content } from 'react-mdl';
 
 import About from './components/About';
 import Home from './components/Home';
 
-class MatchAndHideDrawer extends Component {
-  componentWillUpdate() {
-    document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
-    document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
-  }
-  render() {
-    return <Match {...this.props} />;
-  }
-}
+const RouteHideDrawer = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={() => {
+    if (document.querySelector('.mdl-layout__drawer')) {
+      document.querySelector('.mdl-layout__obfuscator').classList.remove('is-visible');
+      document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
+    }
+    return <Component/>
+  }}/>
+)
 
 export default () => (
-  <HashRouter>
+  <Router>
     <Layout fixedHeader>
       <Header title="PWA"/>
       <Drawer title="PWA">
@@ -27,9 +27,9 @@ export default () => (
         </Navigation>
       </Drawer>
       <Content>
-        <MatchAndHideDrawer exactly pattern="/" component={ Home } />
-        <MatchAndHideDrawer pattern="/about" component={ About } />
+        <RouteHideDrawer exact path="/" component={ Home } />
+        <RouteHideDrawer path="/about" component={ About } />
       </Content>
     </Layout>
-  </HashRouter>
+  </Router>
 );
