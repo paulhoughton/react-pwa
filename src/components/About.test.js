@@ -1,4 +1,4 @@
-jest.mock('react-router/Link');
+jest.mock('react-router-dom/Link');
 
 import React from 'react';
 import renderer from 'react-test-renderer';
