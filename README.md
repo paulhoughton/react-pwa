@@ -1,5 +1,7 @@
 Simple progressive web app starter kit
 
+[See also, rewrite in Preact with material components web](https://github.com/paulhoughton/preact-pwa)
+
 Command|Description
 --- | ---
 *npm start*|Start application with hot reloading enabled
